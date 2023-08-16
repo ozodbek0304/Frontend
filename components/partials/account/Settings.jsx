@@ -26,7 +26,7 @@ class Notifications extends Component {
                             <div className="ps-page__content">
                                 <div className="ps-section--account-setting">
                                     <div className="ps-section__header">
-                                        <h3>Bildirishnomalar</h3>
+                                        <h3>Sozlamalar</h3>
                                     </div>
                                     <div className="ps-section__content">
                                         <TableNotifications />

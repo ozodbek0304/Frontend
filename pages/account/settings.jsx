@@ -1,18 +1,18 @@
 import React from 'react';
 import BreadCrumb from '~/components/elements/BreadCrumb';
-import Notifications from '~/components/partials/account/Notifications';
+import Settings from '~/components/partials/account/Settings';
 import PageContainer from '~/components/layouts/PageContainer';
 import FooterDefault from '~/components/shared/footers/FooterDefault';
 import Newletters from '~/components/partials/commons/Newletters';
 
-const AccountNotificationsPage = () => {
+const AccountSettingsPage = () => {
     const breadCrumb = [
         {
             text: 'Home',
             url: '/',
         },
         {
-            text: 'Bildirishnomalar',
+            text: 'Sozlamalar',
         },
     ];
     return (
@@ -20,7 +20,7 @@ const AccountNotificationsPage = () => {
             <PageContainer footer={<FooterDefault />} title="Notifications">
                 <div className="ps-page--my-account">
                     <BreadCrumb breacrumb={breadCrumb} />
-                    <Notifications />
+                    <Settings />
                 </div>
                 <Newletters layout="container" />
             </PageContainer>
@@ -28,4 +28,4 @@ const AccountNotificationsPage = () => {
     );
 };
 
-export default AccountNotificationsPage;
+export default AccountSettingsPage;

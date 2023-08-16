@@ -1,27 +1,26 @@
 import React from 'react';
-
 import BreadCrumb from '~/components/elements/BreadCrumb';
-import Invoices from '~/components/partials/account/Invoices';
+import Notifications from '~/components/partials/account/ShopList';
+import PageContainer from '~/components/layouts/PageContainer';
 import FooterDefault from '~/components/shared/footers/FooterDefault';
 import Newletters from '~/components/partials/commons/Newletters';
-import PageContainer from '~/components/layouts/PageContainer';
 
-const InvoicePage = () => {
+const AccountShopsPage = () => {
     const breadCrumb = [
         {
             text: 'Home',
             url: '/',
         },
         {
-            text: 'Invoices',
+            text: 'Sotuchilar',
         },
     ];
     return (
         <>
-            <PageContainer footer={<FooterDefault />} title="Invoices">
+            <PageContainer footer={<FooterDefault />} title="Notifications">
                 <div className="ps-page--my-account">
                     <BreadCrumb breacrumb={breadCrumb} />
-                    <Invoices />
+                    <Notifications />
                 </div>
                 <Newletters layout="container" />
             </PageContainer>
@@ -29,4 +28,4 @@ const InvoicePage = () => {
     );
 };
 
-export default InvoicePage;
+export default AccountShopsPage;

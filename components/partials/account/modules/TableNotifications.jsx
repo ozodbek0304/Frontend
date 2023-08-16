@@ -3,10 +3,6 @@ import { Table, Divider, Tag } from 'antd';
 
 class TableNotifications extends Component {
     render() {
-        /* 
-            You can change data by API
-            example: https://ant.design/components/table/
-        */
         const tableData = [
             {
                 key: '1',

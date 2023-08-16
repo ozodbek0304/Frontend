@@ -1,26 +1,29 @@
 import React from 'react';
+
 import BreadCrumb from '~/components/elements/BreadCrumb';
-import Notifications from '~/components/partials/account/Notifications';
+import MyProducts_list from '~/components/partials/account/MyProducts_list';
 import PageContainer from '~/components/layouts/PageContainer';
 import FooterDefault from '~/components/shared/footers/FooterDefault';
 import Newletters from '~/components/partials/commons/Newletters';
 
-const AccountNotificationsPage = () => {
+const RecentViewedProductsPage = () => {
     const breadCrumb = [
         {
             text: 'Home',
             url: '/',
         },
         {
-            text: 'Bildirishnomalar',
+            text: 'Mening mahsulotlarim',
         },
     ];
     return (
         <>
-            <PageContainer footer={<FooterDefault />} title="Notifications">
+            <PageContainer
+                footer={<FooterDefault />}
+                title="Recent Viewed Products">
                 <div className="ps-page--my-account">
                     <BreadCrumb breacrumb={breadCrumb} />
-                    <Notifications />
+                    <MyProducts_list />
                 </div>
                 <Newletters layout="container" />
             </PageContainer>
@@ -28,4 +31,4 @@ const AccountNotificationsPage = () => {
     );
 };
 
-export default AccountNotificationsPage;
+export default RecentViewedProductsPage;

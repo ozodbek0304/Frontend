@@ -36,7 +36,7 @@ const HomepageDefaultPage = () => {
                 <DownLoadApp />
                 <NewArrivals collectionSlug="new-arrivals-products" />
                 <Newletters />
-            </main>
+            </main>z
         </PageContainer>
     );
 };

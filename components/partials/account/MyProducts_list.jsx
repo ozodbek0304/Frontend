@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import GetRepository from '~/reositoriy-admin/GetRepository';
 
-function ProductsLists(){
+function MyProductsLists(){
     const [data, setData] = useState([]);
     const [search, setSerach] = useState([]);
 
@@ -14,7 +14,7 @@ function ProductsLists(){
         if (page === 1) {
             setData([])
         }
-        const ItemsData = await GetRepository.getShopsProducts(page);
+        const ItemsData = await GetRepository.getMyProducts(page);
         setData((prev) => [...prev, ...ItemsData.results]);
         setSerach((prev) => [...prev, ...ItemsData.results]);
         if (ItemsData.next) {
@@ -57,11 +57,6 @@ function ProductsLists(){
             )
         },
         {
-            title: 'Sotuvchi',
-            dataIndex: 'seller',
-            key: 'address',
-        },
-        {
             title: 'Narx/birlik',
             dataIndex: 'price',
             key: 'address',
@@ -96,10 +91,10 @@ function ProductsLists(){
             <section className="ps-my-account ps-page--account">
                 <div className="container">
                 <div className="ps-section__header p-5 mb-5 rounded" style={{ display: "flex", justifyContent: "space-between", backgroundColor: "#fff", boxShadow: "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)" }}>
-                    <h3>Mahsulotlar</h3>
+                    <h3>Mening mahsulotlarim</h3>
                     <input type='search' className='form-control rounded w-50' placeholder="Qidiruv" onInput={handleClick} />
                 </div>
-                    <div className="row " style={{ alignItems: "flex-start" }}>
+                    <div className="row ">
                         <div className="col-lg-4 pb-5">
                             <div className="ps-page__left">
                                 <AccountMenuSidebar data={accountLinks} />
@@ -121,4 +116,4 @@ function ProductsLists(){
     
 }
 
-export default ProductsLists;
+export default MyProductsLists;
